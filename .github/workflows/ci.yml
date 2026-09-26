@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/promptab
+          key: promptab-helm-classic-v0.3.0
+      - run: pip install -e '.[dev]'
+      - run: pytest -q
+      # one experiment replayed on recorded answers
+      - run: python -m promptab replay gpt-j-6b/civil_comments

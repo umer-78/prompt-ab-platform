@@ -1,0 +1,17 @@
+[project]
+name = "prompt-ab-platform"
+version = "0.1.0"
+description = "A/B/n testing for prompts: versioned templates, uniform or Thompson allocation, always-valid elimination"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+dependencies = ["numpy==2.4.6", "scipy==1.17.1", "pyyaml>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["promptab"]

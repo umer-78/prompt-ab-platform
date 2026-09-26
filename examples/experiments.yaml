@@ -1,0 +1,10 @@
+# One experiment: three ways to ask for a review's sentiment. The application renders the
+# assigned template ($text is the review) and reports 1 if the answer was right, else 0.
+experiments:
+  review-sentiment:
+    allocation: thompson
+    max_requests: 20000
+    variants:
+      default: "Passage: $text\nSentiment:"
+      expert: "I am an expert AI assistant who is here to help you with the following. Passage: $text\nSentiment:"
+      input_output: "Input: $text\nOutput:"
