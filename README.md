@@ -1,5 +1,7 @@
 # prompt-ab-platform
 
+[![CI](https://github.com/umer-78/prompt-ab-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/umer-78/prompt-ab-platform/actions/workflows/ci.yml)
+
 [![Prompt A/B Platform: the live demo](.github/preview.jpg)](https://umer-78.github.io/prompt-ab-platform/)
 
 **Live demo:** https://umer-78.github.io/prompt-ab-platform/ (run a prompt experiment in your browser, Thompson sampling or an even split)
@@ -102,3 +104,7 @@ HELM's public results are downloaded on first use into `~/.cache/promptab` (abou
 - `promptab/server.py`: the HTTP API and YAML config (standard library only).
 - `promptab/replay.py`: replays against HELM's recorded answers, and the bench.
 - `promptab/data.py`: the prompt-ablation runs.
+
+## Licence
+
+MIT licence (see [LICENSE](LICENSE)). The data it evaluates (HELM Classic's prompt ablations) keeps its own licence and is downloaded when you run it.
