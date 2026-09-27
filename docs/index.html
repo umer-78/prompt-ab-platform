@@ -1,20 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-scene="bandit">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prompt A/B Platform · Umer Hashmi</title>
   <meta name="description" content="Prompt experiments on live traffic with Thompson sampling and an always-valid test: run one in your browser on HELM&#x27;s recorded prompt-format ablations.">
+  <meta name="theme-color" content="#c026d3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="kit.css">
-  <style>:root { --accent: #c026d3; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #f0abfc; --on-accent: #0f0e0c; } }</style>
+  <link rel="stylesheet" href="fx.css">
+  <style>:root { --accent: #c026d3; --fx-2: #6366f1; --fx-3: #f59e0b; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #f0abfc; --on-accent: #0f0e0c; } }</style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <a class="crumb" href="https://umer-78.github.io/">← All projects</a>
+    <nav class="fx-nav" aria-label="On this page"><a class="fx-home" href="https://umer-78.github.io/">← All projects</a><a class="fx-gh" href="https://github.com/umer-78/prompt-ab-platform">GitHub</a></nav>
+    <header class="fx-hero">
+      <span class="fx-eyebrow">LLM engineering · Python</span>
       <h1>Prompt A/B Platform</h1>
       <p class="lede">Prompt changes are product changes, so they should be tested like them: several prompts share live traffic, traffic shifts toward the better ones while the test runs, and a prompt is dropped only when an always-valid test shows it is worse. Below you can run an experiment on 30 real ones: ten open models, three tasks, and the prompt formats HELM Classic recorded for each.</p>
       <div class="links"><a class="btn primary" href="#run">Run an experiment</a><a class="btn" href="https://github.com/umer-78/prompt-ab-platform">Code and method</a></div>
+      <div class="fx-tags" aria-hidden="true"><div><span>python</span><span>llm</span><span>prompts</span><span>ab-testing</span><span>bandits</span><span>statistics</span><span>python</span><span>llm</span><span>prompts</span><span>ab-testing</span><span>bandits</span><span>statistics</span></div></div>
     </header>
     <main>
       <section class="kpis" id="kpis"></section>
@@ -43,5 +50,6 @@
     <footer>Built by <a href="https://github.com/umer-78">Umer Hashmi</a> · Scores from <a href="https://crfm.stanford.edu/helm/classic/">HELM Classic</a> v0.3.0 prompt ablations (Stanford CRFM), downloaded at run time; this page holds only each prompt's score distribution · Test: mixture likelihood ratio after Johari et al. (2017)</footer>
   </div>
   <script type="module" src="app.js"></script>
+  <script type="module" src="fx.js"></script>
 </body>
 </html>
