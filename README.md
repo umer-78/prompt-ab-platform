@@ -1,5 +1,7 @@
 # prompt-ab-platform
 
+[![Prompt A/B Platform: the live demo](.github/preview.jpg)](https://umer-78.github.io/prompt-ab-platform/)
+
 **Live demo:** https://umer-78.github.io/prompt-ab-platform/ (run a prompt experiment in your browser, Thompson sampling or an even split)
 
 A/B/n testing for prompts on live traffic:
