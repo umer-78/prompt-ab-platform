@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prompt A/B Platform · Umer Hashmi</title>
   <meta name="description" content="Prompt experiments on live traffic with Thompson sampling and an always-valid test: run one in your browser on HELM&#x27;s recorded prompt-format ablations.">
-  <meta name="theme-color" content="#c026d3">
+  <meta name="theme-color" content="#a21caf">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Umer Hashmi · projects">
   <meta property="og:title" content="Prompt A/B Platform · Umer Hashmi">
@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="kit.css">
   <link rel="stylesheet" href="fx.css">
-  <style>:root { --accent: #c026d3; --fx-2: #6366f1; --fx-3: #f59e0b; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #f0abfc; --on-accent: #0f0e0c; } }</style>
+  <style>:root { --accent: #a21caf; --fx-2: #6366f1; --fx-3: #f59e0b; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #f0abfc; --on-accent: #0f0e0c; } }</style>
 </head>
 <body>
   <div class="wrap">
@@ -42,7 +42,7 @@
       <section class="card" id="run">
         <h2>Run an experiment</h2>
         <p class="sub">Up to 20,000 requests. Every 50, the platform updates each prompt's posterior and checks every pair; a prompt is dropped once it is worse than another by more than a point with always-valid evidence. With one prompt left the experiment is decided; at the horizon the best survivor serves. Each request's score is drawn from that prompt's recorded scores.</p>
-        <div class="controls"><label for="exp">Experiment</label><select id="exp"></select></div>
+        <div class="controls"><label for="exp">Experiment</label><select id="exp" data-fx-step></select></div>
         <div class="controls"><label>Allocation</label><div id="alloc"></div><button class="btn primary" id="again" type="button">Run again</button></div>
         <h3 class="small muted" style="margin:6px 0 4px">Share of traffic per prompt (last 500 requests)</h3>
         <div id="share"></div>
