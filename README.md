@@ -1,5 +1,7 @@
 # prompt-ab-platform
 
+**Live demo:** https://umer-78.github.io/prompt-ab-platform/ (run a prompt experiment in your browser, Thompson sampling or an even split)
+
 A/B/n testing for prompts on live traffic:
 
 - Prompt versions are identified by a hash of their text.
@@ -87,6 +89,8 @@ python -m promptab replay gpt-j-6b/civil_comments
 #   request    350: dropped i_o: -54.5 points vs input_output
 #   request    350: decided: input_output
 ```
+
+Rebuild the live demo's data (each prompt's score distribution per experiment) with `python -m promptab.demo`.
 
 HELM's public results are downloaded on first use into `~/.cache/promptab` (about 10 MB); nothing is committed.
 
